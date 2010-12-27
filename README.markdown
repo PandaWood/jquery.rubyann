@@ -16,6 +16,7 @@ The classic use-case for ruby annotations is Japanese [furigana](http://en.wikip
     </div>
 
 Before __rubyann__ transforms it, it renders like this:
+
 <div style="background-color:#dddddd;padding:5px;margin-left:10px">
 The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
 </div>
