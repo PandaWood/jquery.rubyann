@@ -28,7 +28,7 @@ The HTML is modified to use ruby annotation xml (this is the part you probably d
 
     The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>
 
-Which renders to the page as:  
+Which renders to the page with furigana (won't render with GitHub markdown unfortunately, please see __demo.html__ in the source for working example)
 <div style="background-color:#dddddd;padding:5px;margin-left:10px">
 The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>
 </div>
