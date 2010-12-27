@@ -5,13 +5,11 @@ rubyann
 
 ![ruby example](http://www.useragentman.com/blog/wp-content/uploads/2010/10/example-IE-with.png)
 
-Creating ruby characters require a cumbersome (and ugly) xhtml so __rubyann__ is an alternative to writing that manually, which can be quite cumbersome - especially if your HTML is not generated.
+Creating ruby characters requires a cumbersome (and ugly) xhtml syntax, so __rubyann__ is an alternative to writing/embedding xml manually.
 
 #### Example:
 
-The classic use-case for ruby annotations is Japanese [furigana](http://en.wikipedia.org/wiki/Furigana) - the small hiragana characters above the kanji - to help readers who don't know the character.
-
-To use __rubyann__ we wrap characters in a simple markup using braces and commas like this: {kanji,hiragana}:
+The classic use-case for ruby annotations is Japanese [furigana](http://en.wikipedia.org/wiki/Furigana). To use __rubyann__ we wrap characters in a simple markup using braces and commas like this: {kanji,hiragana}:
 
     <div class="furiganaText">
       The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
