@@ -1,7 +1,7 @@
 rubyann
 -------
 
-**rubyann** is a jQuery plugin to allow you to write ruby annotations into HTML using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) look something like this:
+**rubyann** is a jQuery plugin that allows you to write ruby annotations using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) look something like this:
 
 ![ruby example](http://www.useragentman.com/blog/wp-content/uploads/2010/10/example-IE-with.png)
 
@@ -28,11 +28,10 @@ The HTML is modified to use ruby annotation xml (this is the part you probably d
 
     The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>
 
-Which renders to the page with furigana (won't render with GitHub markdown unfortunately, please see __demo.html__ in the source for working example)
-<div style="background-color:#dddddd;padding:5px;margin-left:10px">
-The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>
-</div>
+Which renders to the page with furigana (also see __demo.html__ in the source for working example)
 
-This assumes you have ruby annotation support in your browser - IE5+ / Chrome / Firefox + [HTML Ruby Addon](https://addons.mozilla.org/en-US/firefox/addon/6812/) 
+![ruby example](http://www.users.on.net/~spurry/images/ruby-example.png)
 
-Firefox also supports ruby annotations via css3 - see [HTML5 Ruby Annotations using CSS3](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/)
+__rubyann__  assumes you have ruby annotation support in your browser - IE5+ / Chrome / Firefox + [HTML Ruby Addon](https://addons.mozilla.org/en-US/firefox/addon/6812/) 
+
+Firefox also supports ruby annotations via CSS3 - see [HTML5 Ruby Annotations using CSS3](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/)
