@@ -1,9 +1,11 @@
 rubyann
 -------
 
-**rubyann** is a jQuery plugin to write ruby annotations into existing HTML using [ruby characters.](http://en.wikipedia.org/wiki/Ruby_character)
+**rubyann** is a jQuery plugin to allow you to write ruby annotations into HTML using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) look something like this:
 
-This is an alternative to writing ruby markup manually, which can be quite cumbersome - especially if your HTML is not generated.
+![ruby example](http://www.useragentman.com/blog/wp-content/uploads/2010/10/example-IE-with.png)
+
+Creating ruby characters require a cumbersome (and ugly) xhtml so __rubyann__ is an alternative to writing that manually, which can be quite cumbersome - especially if your HTML is not generated.
 
 #### Example:
 
