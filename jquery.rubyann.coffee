@@ -2,13 +2,12 @@ $ = jQuery
 $.fn.extend({
 	rubyann: ->
 		baseXml = '<ruby><rb>{rbase}</rb><rp>(</rp><rt>{rtext}</rt><rp>)</rp></ruby>'
-		annotationRegex = /\{.*\}/g
 		@each ->
 			storyText = $(@).text()
-			userAnnotations = annotationRegex.exec storyText
-			return $(@) if userAnnotations is null
+			annotationMatches = storyText.match(/\{.*?,.*?\}/g)
+			return $(@) if annotationMatches is null
 
-			$.each userAnnotations, (index,value) ->
+			$.each annotationMatches, (index,value) ->
 				split = value.split ','
 				return $(@) if split.length isnt 2
 

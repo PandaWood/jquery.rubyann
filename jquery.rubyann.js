@@ -3,17 +3,16 @@
   $ = jQuery;
   $.fn.extend({
     rubyann: function() {
-      var annotationRegex, baseXml;
+      var baseXml;
       baseXml = '<ruby><rb>{rbase}</rb><rp>(</rp><rt>{rtext}</rt><rp>)</rp></ruby>';
-      annotationRegex = /\{.*\}/g;
       return this.each(function() {
-        var storyText, userAnnotations;
+        var annotationMatches, storyText;
         storyText = $(this).text();
-        userAnnotations = annotationRegex.exec(storyText);
-        if (userAnnotations === null) {
+        annotationMatches = storyText.match(/\{.*?,.*?\}/g);
+        if (annotationMatches === null) {
           return $(this);
         }
-        $.each(userAnnotations, function(index, value) {
+        $.each(annotationMatches, function(index, value) {
           var rbase, rtext, rxml, split;
           split = value.split(',');
           if (split.length !== 2) {
