@@ -4,10 +4,10 @@ $.fn.extend({
 		baseXml = '<ruby><rb>{rbase}</rb><rp>(</rp><rt>{rtext}</rt><rp>)</rp></ruby>'
 		@each ->
 			storyText = $(@).text()
-			annotationMatches = storyText.match(/\{.*?,.*?\}/g)
-			return $(@) if annotationMatches is null
+			matches = storyText.match(/\{.*?,.*?\}/g)
+			return $(@) if matches is null
 
-			$.each annotationMatches, (index,value) ->
+			$.each matches, (index,value) ->
 				split = value.split ','
 				return $(@) if split.length isnt 2
 
