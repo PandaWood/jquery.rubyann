@@ -9,10 +9,11 @@ $.fn.extend({
 
 			$.each matches, (index,value) ->
 				split = value.split ','
-				return $(@) if split.length isnt 2
+				return @ if split.length isnt 2
 
 				rbase = split[0].replace '{',''
 				rtext = split[1].replace '}',''
+				return @ if rbase.length is 0 or rtext.length is 0
 				rxml = baseXml.replace('{rbase}', rbase).replace('{rtext}', rtext)
 				storyText = storyText.replace value, rxml
 

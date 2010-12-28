@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "mplus";
+	src: url(http://mplus-fonts.sourceforge.jp/webfonts/mplus-2m-regular.ttf) format("truetype");
+}
+
+body {
+	font-family:Meiryo,MS Gothic,mplus;
+	font-size:18px;
+}
+
 ruby {
 	display:inline-table;
   text-align:center;
@@ -20,7 +30,7 @@ rbc > rb, rtc > rt {
 	display:table-cell;
 }
 rt {
-	font-size:0.5em;
+	font-size:0.6em;
   line-height:1.2em;
 }
 rp {
