@@ -1,10 +1,14 @@
 (function() {
-  var $;
+  var $, baseXml;
   $ = jQuery;
+  baseXml = '<ruby>\
+	<rb>{rbase}</rb>\
+	<rp>(</rp>\
+	<rt>{rtext}</rt>\
+	<rp>)</rp>\
+</ruby>';
   $.fn.extend({
     rubyann: function() {
-      var baseXml;
-      baseXml = '<ruby><rb>{rbase}</rb><rp>(</rp><rt>{rtext}</rt><rp>)</rp></ruby>';
       return this.each(function() {
         var matches, storyText;
         storyText = $(this).text();
