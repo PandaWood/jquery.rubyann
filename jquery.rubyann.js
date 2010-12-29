@@ -14,18 +14,18 @@
         storyText = $(this).text();
         matches = storyText.match(/\{.*?,.*?\}/g);
         if (matches === null) {
-          return $(this);
+          return this;
         }
         $.each(matches, function(index, value) {
           var rbase, rtext, rxml, split;
           split = value.split(',');
           if (split.length !== 2) {
-            return this;
+            return;
           }
           rbase = split[0].replace('{', '');
           rtext = split[1].replace('}', '');
           if (rbase.length === 0 || rtext.length === 0) {
-            return this;
+            return;
           }
           rxml = baseXml.replace('{rbase}', rbase).replace('{rtext}', rtext);
           return storyText = storyText.replace(value, rxml);

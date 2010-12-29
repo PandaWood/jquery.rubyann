@@ -13,15 +13,15 @@ $.fn.extend({
 		@each ->
 			storyText = $(@).text()
 			matches = storyText.match(/\{.*?,.*?\}/g)
-			return $(@) if matches is null
+			return @ if matches is null
 
 			$.each matches, (index,value) ->
 				split = value.split ','
-				return @ if split.length isnt 2
+				return if split.length isnt 2
 
 				rbase = split[0].replace '{',''
 				rtext = split[1].replace '}',''
-				return @ if rbase.length is 0 or rtext.length is 0
+				return if rbase.length is 0 or rtext.length is 0
 				
 				rxml = baseXml.replace('{rbase}', rbase)
 											.replace('{rtext}', rtext)
