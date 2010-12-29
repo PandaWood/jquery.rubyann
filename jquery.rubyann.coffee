@@ -24,7 +24,7 @@ $.fn.extend({
 				return if rbase.length is 0 or rtext.length is 0
 				
 				rxml = baseXml.replace('{rbase}', rbase)
-											.replace('{rtext}', rtext)
+				              .replace('{rtext}', rtext)
 				storyText = storyText.replace value, rxml
 
 			$(@).html storyText
