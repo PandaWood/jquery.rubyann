@@ -14,7 +14,7 @@
         delimiters: '{}'
       };
       options = $.extend(defaults, options);
-      if (options.length === !2) {
+      if (options.length !== 2) {
         return;
       }
       delimitStart = "\\" + options.delimiters[0];

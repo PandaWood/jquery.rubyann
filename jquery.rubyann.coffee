@@ -14,7 +14,7 @@ $.fn.extend({
 			delimiters: '{}'
 
 		options = $.extend defaults, options
-		return if options.length is not 2
+		return if options.length isnt 2
 		delimitStart = "\\#{options.delimiters[0]}"
 		delimitEnd = "\\#{options.delimiters[1]}"
 
