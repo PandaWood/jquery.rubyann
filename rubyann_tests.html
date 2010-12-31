@@ -1,5 +1,5 @@
-<!DOCTYPE html>  
-<html>  
+<!DOCTYPE html>
+<html>
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
 	<link type="text/css" media="screen" rel="stylesheet" href="furigana.css"/>
@@ -7,7 +7,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"> </script>
 <script type="text/javascript" src="jquery.rubyann.js"> </script>
 </head>
-<body>  
+<body id="bodyid">
   <div id="test1">
 		test 1 - find absolutely nothing
   </div>
@@ -15,7 +15,7 @@
 		test 2 - find nothing but bogus match {something else in braces}
   </div>
    <div id="test3">
-		test 3 - find match but bogus text {,}
+		test 3 - delimiters are empty {,}
   </div>
 	<div id="test4">
 		test 4 - word for 'bird is' is {鳥,とり}
@@ -24,10 +24,19 @@
 		test 5 - word for 'japanese language' is {日,に}{本,ほん}{語,ご}
 	</div>
   <div class="multi">
-		to kill two birds with one stone - {一,1}{石,stone }{二,2}{鳥,birds }
+		to kill two birds with one stone - {一,1}{石,stone }{二,2}{鳥,birds}
   </div>
   <div class="multi">
 		even a monkey can fall from a tree - サルも{木,き}から{落,お}ちる
+  </div>
+  <div id="or_symbols">
+		$('#customChars').rubyann({delimiters:'orsymbols'}); - bird is |鳥,とり|
+  </div>
+  <div id="at_symbols">
+		$('#customChars2').rubyann({delimiters:'atsymbols'}); - bird is @鳥,とり@
+  </div>
+  <div id="square_brackets">
+		$('#customChars2').rubyann({delimiters:'squarebrackets'}); - bird is [鳥,とり]
   </div>
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -37,7 +46,10 @@
 			$('#test4').rubyann();
 			$('#test5').rubyann();
 			$('.multi').rubyann();
+			$('#or_symbols').rubyann({delimiters:'||'});
+			$('#at_symbols').rubyann({delimiters:'@@'});
+			$('#square_brackets').rubyann({delimiters:'[]'});
 		});
 </script>
-</body>  
-</html>  
+</body>
+</html>
