@@ -1,0 +1,38 @@
+# detabify - remove tabs, convenience function
+String.prototype.detabify = -> @replace /\t*/g, ''
+
+BirdRubyXml = "bird = <ruby><rb>鳥</rb><rp>(</rp><rt>とり</rt><rp>)</rp></ruby>"
+
+module "Finding"
+test "should annotate 1 kanji with 2 hiragana", ->
+	$("#1kanji_2hiragana").rubyann()
+	equals $("#1kanji_2hiragana").html().detabify(), BirdRubyXml, "ruby xml should be generated"
+
+test "finds nothing - no ruby xml", ->
+	$("#nothing").rubyann()
+	equals $("#nothing").html(), "no delimiters here", "no ruby xml is generated"
+
+test "finds delimiters but no comma - no ruby xml", ->
+	$("#empty_braces").rubyann();
+	equals $("#empty_braces").html(), "delimiters found but {no comma within}", "no ruby xml is generated"
+
+test "finds delimiters & comma but no characters", ->
+	$("#no_characters").rubyann()
+	equals $("#no_characters").html(), "no characters {,}", "no ruby xml is generated"
+
+test "should annotate multiple furigana", ->
+	$("#multiple_furigana").rubyann()
+	equals $("#multiple_furigana").html().detabify(), "japanese language - <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>",
+		"ruby xml is generated"
+
+test "use @ as delimiter", ->
+	$("#delimiter_at").rubyann delimiters:"@@"
+	equals $("#delimiter_at").html().detabify(), BirdRubyXml, "ruby xml is generated"
+
+test "use [] as delimiters", ->
+	$("#delimiter_squarebrackets").rubyann delimiters:"[]"
+	equals $("#delimiter_squarebrackets").html().detabify(), BirdRubyXml, "ruby xml is generated"
+
+test "invalid delimiters args", ->
+	$("#do_nothing").rubyann delimiters:"["
+	equals $("#do_nothing").html(), "bird = [鳥,とり]", "nothing is done because delimiters args is invalid"

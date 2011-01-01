@@ -10,9 +10,7 @@ baseXml =
 
 $.fn.extend({
 	rubyann: (options) ->
-		defaults =
-			delimiters: '{}'
-
+		defaults = delimiters: '{}'
 		options = $.extend defaults, options
 		return if options.delimiters.length isnt 2
 		delimitStart = "\\#{options.delimiters[0]}"
@@ -20,9 +18,7 @@ $.fn.extend({
 
 		@each ->
 			storyText = $(@).text()
-			matches = storyText.match ///
-					#{delimitStart}.*?,.*?#{delimitEnd}
-				///g
+			matches = storyText.match ///#{delimitStart}.*?,.*?#{delimitEnd}///g
 			return @ if matches is null
 
 			$.each matches, (index,value) ->
