@@ -45,5 +45,5 @@ __rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-scri
 
 __braces__ can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
 
-    $('.furiganaText').rubyann({delimiters:"[]");
-    $('.furiganaText').rubyann({delimiters:"@@");
+    $('.furiganaText').rubyann({delimiters:"[]"});
+    $('.furiganaText').rubyann({delimiters:"@@"});
