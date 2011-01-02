@@ -1,7 +1,9 @@
 # detabify - remove tabs, convenience function
-String.prototype.detabify = -> @replace(/\t*/g, '')
+String.prototype.detabify = ->
+	@replace(/\s*/g, '').toLowerCase()
 
-BirdRubyXml = "bird = <ruby><rb>鳥</rb><rp>(</rp><rt>とり</rt><rp>)</rp></ruby>"
+
+BirdRubyXml = "bird=<ruby><rb>鳥</rb><rp>(</rp><rt>とり</rt><rp>)</rp></ruby>"
 
 module "Finding"
 test 'should annotate 1 kanji with 2 hiragana', ->
@@ -22,7 +24,7 @@ test "finds delimiters & comma but no characters", ->
 
 test "should annotate multiple furigana", ->
 	$('#multiple_furigana').rubyann()
-	equals $('#multiple_furigana').html().detabify(), 'japanese language - <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>', 	'ruby xml is generated'
+	equals $('#multiple_furigana').html().detabify(), 'japanese_language:<ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>', 	'ruby xml is generated'
 
 test "use @ as delimiter", ->
 	$('#delimiter_at').rubyann delimiters:'@@'
@@ -34,4 +36,4 @@ test 'use [] as delimiters', ->
 
 test "invalid delimiters args", ->
 	$('#do_nothing').rubyann delimiters:'['
-	equals $('#do_nothing').html(), 'bird = [鳥,とり]', 'nothing is done because delimiters args is invalid'
+	equals $('#do_nothing').html(), 'bird=[鳥,とり]', 'nothing is done because delimiters args is invalid'
