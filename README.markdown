@@ -33,6 +33,11 @@ Which renders to the page with furigana (also see __demo.html__ in the source fo
 
 ![ruby example](http://www.users.on.net/~spurry/images/ruby-example.png)
 
+(image supplied as GitHub markdown doesn't seem to allow ruby annotations)
+
+###Notes:
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
 Ruby Annotation is supported my most modern browsers - IE5+ / Chrome / Firefox + [HTML Ruby Addon](https://addons.mozilla.org/en-US/firefox/addon/6812/)
 Firefox also supports ruby annotations via CSS3 - see [HTML5 Ruby Annotations using CSS3](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/)
+
+__rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript. A minified javascript file is supplied as a download for tagged versions.
