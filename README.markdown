@@ -1,11 +1,11 @@
 rubyann
 -------
 
-**rubyann** is a jQuery plugin that allows you to write ruby annotations using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) look something like this:
+**rubyann** is a jQuery plugin that allows you to write ruby annotations using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) are small reading aids that are placed on top of characters - here's an example:
 
 ![ruby example](http://www.useragentman.com/blog/wp-content/uploads/2010/10/example-IE-with.png)
 
-Creating ruby characters requires a cumbersome (and ugly) xhtml syntax, so __rubyann__ is an alternative to writing/embedding xml manually.
+Creating ruby characters requires a cumbersome (and ugly) XML syntax, so __rubyann__ is an alternative to writing/embedding XML (in HTML) manually.
 
 #### Example:
 
@@ -37,7 +37,13 @@ Which renders to the page with furigana (also see __demo.html__ in the source fo
 
 ###Notes:
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
+
 Ruby Annotation is supported my most modern browsers - IE5+ / Chrome / Firefox + [HTML Ruby Addon](https://addons.mozilla.org/en-US/firefox/addon/6812/)
-Firefox also supports ruby annotations via CSS3 - see [HTML5 Ruby Annotations using CSS3](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/)
+Firefox also supports ruby annotations via CSS3 - see [HTML5 Ruby Annotations using CSS](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/) - __demo.html__ uses css in this way (see _furigana.css_).
 
 __rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript. A minified javascript file is supplied as a download for tagged versions.
+
+__braces__ can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
+
+    $('.furiganaText').rubyann({delimiters:"[]");
+    $('.furiganaText').rubyann({delimiters:"@@");
