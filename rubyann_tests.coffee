@@ -2,7 +2,6 @@
 String.prototype.detabify = ->
 	@replace(/\s*/g, '').toLowerCase()
 
-
 BirdRubyXml = "bird=<ruby><rb>鳥</rb><rp>(</rp><rt>とり</rt><rp>)</rp></ruby>"
 
 module "Finding"
@@ -15,7 +14,7 @@ test "finds nothing - no ruby xml", ->
 	equals $('#nothing').html(), 'no delimiters here', 'ruby xml is not generated'
 
 test "finds delimiters but no comma - no ruby xml", ->
-	$('#empty_braces').rubyann();
+	$('#empty_braces').rubyann()
 	equals $('#empty_braces').html(), 'delimiters found but {no comma within}', 'ruby xml is not generated'
 
 test "finds delimiters & comma but no characters", ->
@@ -30,10 +29,15 @@ test "use @ as delimiter", ->
 	$('#delimiter_at').rubyann delimiters:'@@'
 	equals $('#delimiter_at').html().detabify(), BirdRubyXml, 'ruby xml is not generated'
 
-test 'use [] as delimiters', ->
+test "use [] as delimiters", ->
 	$('#delimiter_squarebrackets').rubyann delimiters:'[]'
 	equals $('#delimiter_squarebrackets').html().detabify(), BirdRubyXml, 'ruby xml is not generated'
 
 test "invalid delimiters args", ->
 	$('#do_nothing').rubyann delimiters:'['
 	equals $('#do_nothing').html(), 'bird=[鳥,とり]', 'nothing is done because delimiters args is invalid'
+
+# this test added because code originally used .text() which needed to be replaced by .html()
+test "embedded html works", ->
+	$('#embedded_html').rubyann()
+	equals $('#embedded_html').html().detabify(), "<ol><li>#{BirdRubyXml}</li></ol>", 'no html is lost'

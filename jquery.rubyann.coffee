@@ -17,7 +17,8 @@ $.fn.extend({
 		delimitEnd = "\\#{options.delimiters[1]}"
 
 		@each ->
-			storyText = $(@).text()
+			storyText = $(@).html()
+			console.debug 'storyText=', storyText
 			matches = storyText.match ///#{delimitStart}.*?,.*?#{delimitEnd}///g
 			return @ if matches is null
 
