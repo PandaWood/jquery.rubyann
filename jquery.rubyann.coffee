@@ -18,7 +18,6 @@ $.fn.extend({
 
 		@each ->
 			storyText = $(@).html()
-			console.debug 'storyText=', storyText
 			matches = storyText.match ///#{delimitStart}.*?,.*?#{delimitEnd}///g
 			return @ if matches is null
 
