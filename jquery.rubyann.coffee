@@ -2,9 +2,9 @@ $ = jQuery
 
 baseXml = 
 '<ruby>
-	<rb>{rbase}</rb>
+	<rb>$2</rb>
 	<rp>(</rp>
-	<rt>{rtext}</rt>
+	<rt>$3</rt>
 	<rp>)</rp>
 </ruby>'
 
@@ -13,25 +13,11 @@ $.fn.extend({
 		defaults = delimiters: '{}'
 		options = $.extend defaults, options
 		return if options.delimiters.length isnt 2
-		delimitStart = "\\#{options.delimiters[0]}"
+		delimitBeg = "\\#{options.delimiters[0]}"
 		delimitEnd = "\\#{options.delimiters[1]}"
 
 		@each ->
-			storyText = $(@).html()
-			matches = storyText.match ///#{delimitStart}.*?,.*?#{delimitEnd}///g
-			return @ if matches is null
-
-			$.each matches, (index,value) ->
-				split = value.split ','
-				return if split.length isnt 2
-
-				rbase = split[0].replace options.delimiters[0],''
-				rtext = split[1].replace options.delimiters[1],''
-				return if rbase.length is 0 or rtext.length is 0
-				
-				rxml = baseXml.replace('{rbase}', rbase)
-				              .replace('{rtext}', rtext)
-				storyText = storyText.replace value, rxml
-
-			$(@).html storyText
+			html = $(@).html()
+			regex = ///#{delimitBeg}((\S{1,}?),(\S{1,}?))#{delimitEnd}///g
+			$(@).html(html.replace regex, baseXml)
 })

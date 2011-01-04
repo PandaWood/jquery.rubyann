@@ -37,7 +37,7 @@ test "invalid delimiters args", ->
 	$('#do_nothing').rubyann delimiters:'['
 	equals $('#do_nothing').html(), 'bird=[鳥,とり]', 'nothing is done because delimiters args is invalid'
 
-# this test added because code originally used .text() which needed to be replaced by .html()
+# this test added because code originally used $(this).text() (which should have been $(this).html()
 test "embedded html works", ->
 	$('#embedded_html').rubyann()
 	equals $('#embedded_html').html().detabify(), "<ol><li>#{BirdRubyXml}</li></ol>", 'no html is lost'
