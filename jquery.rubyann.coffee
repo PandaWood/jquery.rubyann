@@ -15,9 +15,10 @@ $.fn.extend({
 		return if options.delimiters.length isnt 2
 		delimitBeg = "\\#{options.delimiters[0]}"
 		delimitEnd = "\\#{options.delimiters[1]}"
+		regex = ///#{delimitBeg}((\S{1,}?),(\S{1,}?))#{delimitEnd}///g
 
 		@each ->
 			html = $(@).html()
-			regex = ///#{delimitBeg}((\S{1,}?),(\S{1,}?))#{delimitEnd}///g
-			$(@).html(html.replace regex, baseXml)
+			newHtml = html.replace regex, baseXml
+			$(@).html(newHtml) if newHtml isnt html
 })
