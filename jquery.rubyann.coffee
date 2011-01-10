@@ -17,11 +17,7 @@ $.fn.extend({
 
 		startChar = "\\#{options.delimiters[0]}"
 		endChar = "\\#{options.delimiters[1]}"
-		regex = ///
-							#{startChar}
-								((\S+?),(\S+?))
-							#{endChar}
-						///g
+		regex = ///#{startChar}((\S+?),(\S+?))#{endChar}///g
 
 		@each ->
 			html = $(@).html()
