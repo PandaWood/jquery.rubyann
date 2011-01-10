@@ -10,12 +10,18 @@ baseXml =
 
 $.fn.extend({
 	rubyann: (options) ->
+
 		defaults = delimiters: '{}'
 		options = $.extend defaults, options
 		return if options.delimiters.length isnt 2
-		delimitBeg = "\\#{options.delimiters[0]}"
-		delimitEnd = "\\#{options.delimiters[1]}"
-		regex = ///#{delimitBeg}((\S+?),(\S+?))#{delimitEnd}///g
+
+		startChar = "\\#{options.delimiters[0]}"
+		endChar = "\\#{options.delimiters[1]}"
+		regex = ///
+							#{startChar}
+								((\S+?),(\S+?))
+							#{endChar}
+						///g
 
 		@each ->
 			html = $(@).html()
