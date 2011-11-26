@@ -9,7 +9,7 @@ body {
 }
 
 ruby {
-	display:inline-table;
+  display:inline-table;
   text-align:center;
   white-space:nowrap;
   text-indent:0;
