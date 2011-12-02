@@ -8,11 +8,11 @@ baseXml =
 	<rp>)</rp>
 </ruby>'
 
-$.fn.extend({
+$.fn.extend {}=
 	rubyann: (options) ->
 
-		defaults = delimiters: '{}'
-		options = $.extend defaults, options
+		settings = delimiters: '{}'
+		options = $.extend settings, options
 		return if options.delimiters.length isnt 2
 
 		startChar = "\\#{options.delimiters[0]}"
@@ -23,4 +23,4 @@ $.fn.extend({
 			html = $(@).html()
 			newHtml = html.replace regex, baseXml
 			$(@).html(newHtml) if newHtml isnt html
-})
+			
