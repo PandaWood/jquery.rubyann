@@ -31,9 +31,8 @@ The HTML is modified to use ruby annotation xml (this is the part you probably d
 
 Which renders to the page with furigana (also see __demo.html__ in the source for working example)
 
-![ruby example](http://www.users.on.net/~spurry/images/ruby-example.png)
 
-(image supplied as GitHub markdown doesn't seem to allow ruby annotations)
+###  The word for 'japanese language' is <ruby>  <rb>日</rb>	<rp>(</rp>	<rt>に</rt>	<rp>)</rp></ruby><ruby>  <rb>本</rb>	<rp>(</rp>	<rt>ほん</rt>	<rp>)</rp></ruby><ruby>  <rb>語</rb>	<rp>(</rp>	<rt>ご</rt>	<rp>)</rp></ruby>
 
 ###Notes:
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
