@@ -3,6 +3,11 @@
 	src: url(http://mplus-fonts.sourceforge.jp/webfonts/mplus-2m-regular.ttf) format("truetype");
 }
 
+
+#qunit-testrunner-toolbar, #qunit-filteredTest, #qunit-userAgent, #qunit-testresult, #qunit-tests li { font-size: medium; }
+#qunit-tests { font-size: large; }
+
+
 body {
 	font-family:Meiryo,MS Gothic,mplus;
 	font-size:14px;

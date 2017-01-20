@@ -1,6 +1,4 @@
-$ = jQuery
-
-baseXml = 
+baseXml =
 '<ruby>
 	<rb>$2</rb>
 	<rp>(</rp>

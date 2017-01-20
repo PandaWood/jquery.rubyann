@@ -3,22 +3,17 @@
 <head>
 	<title>rubyann tests</title>
 	<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-	<link rel="stylesheet" href="lib/qunit.css" type="text/css"/>
-	<link type="text/css" media="screen" rel="stylesheet" href="furigana.css"/>
-	<script type="text/javascript" src="lib/qunit1.2.min.js"> </script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"> </script>
-	<script type="text/coffeescript" src="jquery.rubyann.coffee"></script>
-	<script type="text/coffeescript" src="rubyann_tests.coffee"></script>
-	<script type="text/javascript" src="lib/coffee-script.min.js"></script>	
+	<link rel="stylesheet" href="../node_modules/qunitjs/qunit/qunit.css" type="text/css"/>
+	<link type="text/css" media="screen" rel="stylesheet" href="../css/furigana.css"/>
+	<script src="../node_modules/qunitjs/qunit/qunit.js"> </script>
+	<script src="../node_modules/jquery/dist/jquery.js"> </script>
+	<script src="../dist/jquery.rubyann.js"></script>
+	<script src="../js/rubyann_tests.js"></script>
 </head>
 <body>
-
-	<!--qunit ui-->
-	<h1 id="qunit-header">QUnit Test Suite</h1>
-	<h2 id="qunit-banner"></h2>
-	<div id="qunit-testrunner-toolbar"></div>
-	<h2 id="qunit-userAgent"></h2>
-	<ol id="qunit-tests"></ol>
+	<!-- qunit -->
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
 
 	<!--test data-->
 	<hr/>
@@ -31,6 +26,7 @@
 	<div id="delimiter_squarebrackets">bird=[鳥,とり]</div>
 	<div id="do_nothing">bird=[鳥,とり]</div>
 	<div id="embedded_html"><ol><li>bird={鳥,とり}</li></ol></div>
+	<div id="japanese_commas"><ol><li>bird={鳥、とり}</li></ol></div>
 
 	<div id="multidiv1" class="multi_div">multidiv1,bird={鳥,とり}</div>
 	<div id="multidiv2" class="multi_div">multidiv2,bird={鳥,とり}</div>
