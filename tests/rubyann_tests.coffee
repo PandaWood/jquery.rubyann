@@ -4,7 +4,7 @@ String.prototype.detabify = ->
 
 BirdRubyXml = "bird=<ruby><rb>鳥</rb><rp>(</rp><rt>とり</rt><rp>)</rp></ruby>"
 
-QUnit.module 'Finding'
+QUnit.module 'Annotate Ruby'
 
 QUnit.test 'annotate 1 kanji with 2 hiragana', (assert) ->
 	$('#1kanji_2hiragana').rubyann()

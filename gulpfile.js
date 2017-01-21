@@ -5,6 +5,7 @@ var coffee = require('gulp-coffee')
 var qunit = require('gulp-qunit')
 var uglify = require('gulp-uglify')
 
+// transpile coffee src
 gulp.task('coffee', function() {
 
 	gulp.src('./src/*.coffee')
@@ -14,7 +15,7 @@ gulp.task('coffee', function() {
 
 })
 
-
+// transpile test coffee and run qunit tests
 gulp.task('test', function() {
 
 	gulp.src('./tests/*.coffee')

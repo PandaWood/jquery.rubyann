@@ -1,44 +1,51 @@
 rubyann
 -------
 
-**rubyann** is a jQuery plugin that allows you to write ruby annotations using a custom-markup syntax. [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) are small reading aids that are placed on top of characters - here's an example:
+**rubyann** is a jQuery plugin that allows you to write [ruby annotations](https://en.wikipedia.org/wiki/Ruby_character) using a much simplified (custom) markup syntax.
 
-![ruby example](http://www.useragentman.com/blog/wp-content/uploads/2010/10/example-IE-with.png)
+[Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) are small reading aids that are placed on top of characters.
 
-Creating ruby characters requires a cumbersome (and ugly) XML syntax, so __rubyann__ is an alternative to writing/embedding XML (in HTML) manually.
 
 #### Example:
 
-The classic use-case for ruby annotations is Japanese [furigana](http://en.wikipedia.org/wiki/Furigana). To use __rubyann__ we wrap characters in a simple markup using braces and commas like this: {kanji,hiragana}:
+The classic use-case for ruby annotations is Japanese [furigana](http://en.wikipedia.org/wiki/Furigana).
+
+Below, we see the required XML syntax to render a simple sentence using ruby annotations.
+
+The goal of this is to simply output the sentence "The word for Japanese language is 日本語" - adding hiragana characters above the kanji.
+
+`The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>`
+
+To do this using __rubyann__ we wrap characters in a much simpler markup - using braces and commas - like this:
 
     <div class="furiganaText">
       The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
     </div>
 
-Before __rubyann__ transforms it, it renders like this:
+Without being rendered by __rubyann__, the custom syntax will render to HTML like this:
 
 <div style="background-color:#dddddd;padding:5px;margin-left:10px">
 The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
 </div>
 
-When __rubyann__ is called in jquery/javascript like this:
+When __rubyann__ is called in jquery/javascript as below, the same XML syntax shown above will be rendered instead.
 
     $('.furiganaText').rubyann();
 
-The HTML is modified to use ruby annotation xml (this is the part you probably don't want to type yourself):
+So, the HTML is modified to use ruby annotation xml (the part you probably don't want to type in manually):
 
-    The word for 'japanese language' is <ruby><rb>日</rb><rp>(</rp><rt>に</rt><rp>)</rp></ruby><ruby><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby><ruby><rb>語</rb><rp>(</rp><rt>ご</rt><rp>)</rp></ruby>
 
-Which renders to the page with furigana (also see __demo.html__ in the source for working example)
+See __demo.html__ in the source for working example/demonstration.
 
 
 ###  The word for 'japanese language' is <ruby>  <rb>日</rb>	<rp>(</rp>	<rt>に</rt>	<rp>)</rp></ruby><ruby>  <rb>本</rb>	<rp>(</rp>	<rt>ほん</rt>	<rp>)</rp></ruby><ruby>  <rb>語</rb>	<rp>(</rp>	<rt>ご</rt>	<rp>)</rp></ruby>
 
-###Notes:
+#
+#### Notes
+
+Ruby Annotation is supported my most modern browsers (see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
 
-Ruby Annotation is supported my most modern browsers - IE5+ / Chrome / Firefox + [HTML Ruby Addon](https://addons.mozilla.org/en-US/firefox/addon/6812/)
-Firefox also supports ruby annotations via CSS3 - see [HTML5 Ruby Annotations using CSS](http://www.useragentman.com/blog/2010/10/29/cross-browser-html5-ruby-annotations-using-css/) - __demo.html__ uses css in this way (see _furigana.css_).
 
 __rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript. A minified javascript file is supplied as a download for tagged versions.
 
@@ -46,3 +53,14 @@ __braces__ can be replaced by delimeters of your choice. 2 characters must be sp
 
     $('.furiganaText').rubyann({delimiters:"[]"});
     $('.furiganaText').rubyann({delimiters:"@@"});
+
+#
+#### Build setup
+
+Install [NodeJS](www.nodejs.org)
+
+Install gulp (globally in order to run from command (eg `npm install -g gulp-cli` - nore details are available at http://gulpjs.com/
+
+Install the NPM dependencies by running `npm install` or `yarn` (if you have [yarn](https://yarnpkg.com/) installed)
+
+Run the build (create minified release file and run tests) by running `gulp` from the root rubyann directory.
