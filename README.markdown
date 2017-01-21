@@ -43,13 +43,14 @@ See __demo.html__ in the source for working example/demonstration.
 #
 #### Notes
 
-Ruby Annotation is supported my most modern browsers (see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
+Ruby Annotation is supported by most modern browsers (see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
+
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
 
 
 __rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript. A minified javascript file is supplied as a download for tagged versions.
 
-__braces__ can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
+__braces__ used in the custom syntax can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
 
     $('.furiganaText').rubyann({delimiters:"[]"});
     $('.furiganaText').rubyann({delimiters:"@@"});
@@ -59,8 +60,8 @@ __braces__ can be replaced by delimeters of your choice. 2 characters must be sp
 
 Install [NodeJS](www.nodejs.org)
 
-Install gulp (globally in order to run from command (eg `npm install -g gulp-cli` - nore details are available at http://gulpjs.com/
+Install gulp (globally in order to run from command (eg `npm install -g gulp-cli`) - see http://gulpjs.com/
 
-Install the NPM dependencies by running `npm install` or `yarn` (if you have [yarn](https://yarnpkg.com/) installed)
+Install the (NPM) dependencies by running `npm install` or `yarn` (if you have [yarn](https://yarnpkg.com/) installed)
 
-Run the build (create minified release file and run tests) by running `gulp` from the root rubyann directory.
+Run the build (creates a minified release file and runs tests) by running `gulp` from the root rubyann directory
