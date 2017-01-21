@@ -6,7 +6,7 @@ rubyann
 [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) are small reading aids that are placed on top of characters.
 
 
-#### Example:
+#### Example
 
 The classic use-case for ruby annotations is Japanese [furigana](http://en.wikipedia.org/wiki/Furigana).
 
@@ -43,12 +43,12 @@ See __demo.html__ in the source for working example/demonstration.
 #
 #### Notes
 
-Ruby Annotation is supported by most modern browsers (see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
+Ruby Annotation is supported by most modern browsers - see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
 
 __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
 
 
-__rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript. A minified javascript file is supplied as a download for tagged versions.
+__rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/); it has a qunit test suite also in coffeescript.
 
 __braces__ used in the custom syntax can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
 
