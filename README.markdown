@@ -61,7 +61,10 @@ __braces__ used in the custom syntax can be replaced by delimeters of your choic
 
 [NodeJS](http://www.nodejs.org)
 
-[gulp](http://gulpjs.com/) - installed globally - to run from command eg `npm install -g gulp-cli`
+[gulp](http://gulpjs.com/) - installed globally to run from command eg `npm install -g gulp-cli`
+
+If typing `gulp -v` on the command line shows a version output like `CLI version 1.2.2`... then you have it.
+
 
 #### Run
 Install the (NPM) dependencies by running `npm install` or `yarn` ([yarn](https://yarnpkg.com/) is highly recommended)

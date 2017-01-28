@@ -2,9 +2,9 @@
   "name": "rubyann",
   "version": "1.0.3",
   "description": "a jquery plugin that allows for writing ruby annotations using a custom markup syntax",
-  "main": "index.js",
+  "main": "jquery.rubyann.coffee",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,7 @@
     "furigana"
   ],
   "author": "Peter van der Woude",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/PandaWood/rubyann/issues"
   },
