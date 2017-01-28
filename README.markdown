@@ -38,9 +38,7 @@ When __rubyann__ is called in jquery/javascript as below, the same XML syntax sh
 See __demo.html__ in the source tree for a working example/demonstration.
 
 
-
-#
-### Notes
+## Notes
 
 [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
 
@@ -49,20 +47,21 @@ __rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby 
 __rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/).
 The project includes a [qunit](https://qunitjs.com/) test suite - also written in coffeescript.
 
-##### Usage Notes
+#### Usage
 __braces__ used in the custom syntax can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
 
     $('.furiganaText').rubyann({delimiters:"[]"});
     $('.furiganaText').rubyann({delimiters:"@@"});
 
-#
-#### Build Requirements
 
-[NodeJS](www.nodejs.org)
+## Build
+#### Requirements
 
-[gulp](http://gulpjs.com/) - installed globally in order to run from command (eg `npm install -g gulp-cli`)
+[NodeJS](http://www.nodejs.org)
 
-##### Build
-Install the (NPM) dependencies by running `npm install` or `yarn` (if you have [yarn](https://yarnpkg.com/) installed - highly recommended)
+[gulp](http://gulpjs.com/) - installed globally - to run from command eg `npm install -g gulp-cli`
 
-To run the build, simply type `gulp` in the root rubyann directory. The default build task transpiles and minifies the main plugin source and also runs the qunit test suite
+#### Run
+Install the (NPM) dependencies by running `npm install` or `yarn` ([yarn](https://yarnpkg.com/) is highly recommended)
+
+Simply type `gulp` in the root rubyann directory. The default build task transpiles and minifies the main plugin source and also runs the qunit test suite
