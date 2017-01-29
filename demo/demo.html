@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
-    <link type="text/css" media="screen" rel="stylesheet" href="../css/furigana.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/furigana.css"/>
     <script src="../node_modules/jquery/dist/jquery.js"> </script>
     <script src="../dist/jquery.rubyann.js"></script>
     <script>
       $(function() {
 	      alert('rubyann will now change {日,に}{本,ほん}{語,ご} to furigana...');
-	      $('.furiganaText').rubyann();
+	      $('.furigana-text').rubyann();
       });
     </script>
 </head>
 
 <body>
-	<div class="furiganaText">The word for 'japanese language' is {日,に}{本,ほん}{語,ご}</div>
+	<div class="furigana-text">The word for 'japanese language' is {日,に}{本,ほん}{語,ご}</div>
 </body>
 </html>

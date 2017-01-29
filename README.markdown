@@ -18,7 +18,7 @@ It renders Like this:
 #####  The word for 'japanese language' is <ruby>  <rb>日</rb>	<rp>(</rp>	<rt>に</rt>	<rp>)</rp></ruby><ruby>  <rb>本</rb>	<rp>(</rp>	<rt>ほん</rt>	<rp>)</rp></ruby><ruby>  <rb>語</rb>	<rp>(</rp>	<rt>ご</rt>	<rp>)</rp></ruby>
 
 #
-To do this using __rubyann__ we wrap characters in a much simpler markup - using braces and commas - like this:
+To do this using __rubyann__ we wrap characters in a much simpler markup - using braces and commas - where the main character is first, and the annotated character (above it) is separated by a comma, both inside braces:
 
     <div class="furiganaText">
       The word for 'japanese language' is {日,に}{本,ほん}{語,ご}

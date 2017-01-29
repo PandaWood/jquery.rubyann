@@ -4,7 +4,9 @@
   "description": "rubyann is a jQuery plugin which converts a simple custom-syntax to ruby annotations (eg furigana) in HTML",
   "main": "jquery.rubyann.coffee",
   "scripts": {
-    "test": "gulp test"
+    "gulp": "gulp",
+    "test": "gulp test",
+    "release": "gulp coffee"
   },
   "repository": {
     "type": "git",
