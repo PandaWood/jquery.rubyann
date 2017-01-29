@@ -36,6 +36,8 @@ When __rubyann__ is called in jquery/javascript as below:
 
 The same HTML shown above (eg `<ruby>...`) will be rendered instead.
 
+So we've basically replaced a bunch of complex HTML markup with our own simple markup, which is then converted by running `rubyann` over the element.
+
 <br/>
 
 See __demo/demo.html__ in the source tree for a working example/demonstration.
@@ -55,6 +57,10 @@ __braces__ used in the custom syntax can be replaced by delimeters of your choic
     $('.furiganaText').rubyann({delimiters:"[]"});
     $('.furiganaText').rubyann({delimiters:"@@"});
 
+#### Contributions
+This is a very small piece of code and I would be very happy to take any suggestions to improve it in any way.
+
+Feel free to create an issue or drop me an email.
 
 ## Build
 #### Requirements
@@ -63,10 +69,11 @@ __braces__ used in the custom syntax can be replaced by delimeters of your choic
 
 [gulp](http://gulpjs.com/) - installed globally to run from command eg `npm install -g gulp-cli`
 
-If typing `gulp -v` on the command line shows a version output like `CLI version 1.2.2`... then you have it.
-
 
 #### Run
 Install the (NPM) dependencies by running `npm install` or `yarn` ([yarn](https://yarnpkg.com/) is highly recommended)
 
-Simply type `gulp` in the root rubyann directory. The default build task transpiles and minifies the main plugin source and also runs the qunit test suite
+Run `gulp` in the root rubyann directory. The default build task transpiles and minifies the main plugin source and also runs the qunit test suite
+
+Run `gulp tests` or `npm run tests` to just transpile and run the test suite.
+

@@ -1,7 +1,7 @@
 {
   "name": "rubyann",
   "version": "1.0.3",
-  "description": "a jquery plugin that allows for writing ruby annotations using a custom markup syntax",
+  "description": "rubyann is a jQuery plugin which converts a simple custom-syntax to ruby annotations (eg furigana) in HTML",
   "main": "jquery.rubyann.coffee",
   "scripts": {
     "test": "gulp test"
@@ -15,7 +15,10 @@
     "annotations",
     "furigana"
   ],
-  "author": "Peter van der Woude",
+  "author": {
+    "name": "Peter van der Woude",
+    "email": "pandawoude@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/PandaWood/rubyann/issues"
