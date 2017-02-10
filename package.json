@@ -1,7 +1,7 @@
 {
   "name": "rubyann",
   "version": "1.0.3",
-  "description": "rubyann is a jQuery plugin which converts a simple custom-syntax to ruby annotations (eg furigana) in HTML",
+  "description": "rubyann is a jQuery plugin which uses a simple custom-syntax to create ruby annotations (eg furigana) in HTML",
   "main": "jquery.rubyann.coffee",
   "scripts": {
     "gulp": "gulp",

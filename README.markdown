@@ -67,13 +67,10 @@ Feel free to create an issue or drop me an email.
 
 [NodeJS](http://www.nodejs.org)
 
-[gulp](http://gulpjs.com/) - installed globally to run from command eg `npm install -g gulp-cli`
-
-
 #### Run
-Install the (NPM) dependencies by running `npm install` or `yarn` ([yarn](https://yarnpkg.com/) is highly recommended)
+`npm install` or `yarn` - installs the (NPM) dependencies ([yarn](https://yarnpkg.com/) is highly recommended)
 
-Run `gulp` in the root rubyann directory. The default build task transpiles and minifies the main plugin source and also runs the qunit test suite
+`npm release` transpiles all source and minifies the main plugin source to 'dist' directory and also runs the qunit test suite
 
-Run `gulp tests` or `npm run tests` to just transpile and run the test suite.
+`npm run test` transpiles and runs the test suite
 
