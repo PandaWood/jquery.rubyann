@@ -70,7 +70,7 @@ Feel free to create an issue or drop me an email.
 #### Run
 `npm install` or `yarn` - installs the (NPM) dependencies ([yarn](https://yarnpkg.com/) is highly recommended)
 
-`npm release` transpiles all source and minifies the main plugin source to 'dist' directory and also runs the qunit test suite
+`npm run release` transpiles all source and minifies the main plugin source to 'dist' directory
 
 `npm run test` transpiles and runs the test suite
 
