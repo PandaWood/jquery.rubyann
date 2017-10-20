@@ -5,6 +5,7 @@ rubyann
 
 [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) (annotations) are small reading aids that are placed on top of characters (eg [furigana](http://en.wikipedia.org/wiki/Furigana) with kanji in Japanese).
 
+[![NPM](https://nodei.co/npm/rubyann.png)](https://nodei.co/npm/rubyann/)
 
 #### Example
 
