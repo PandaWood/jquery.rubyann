@@ -15,7 +15,8 @@
   "keywords": [
     "ruby",
     "annotations",
-    "furigana"
+    "furigana",
+    "kanji"
   ],
   "author": {
     "name": "Peter van der Woude",
@@ -27,7 +28,7 @@
   },
   "homepage": "https://github.com/PandaWood/rubyann#readme",
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "<=3.1.1"
   },
   "devDependencies": {
     "coffee-script": "^1.12.2",
