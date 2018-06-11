@@ -1,10 +1,3 @@
-RUBY_ANN_TEMPLATE =
-'<ruby>
-	<rb>$2</rb>
-	<rp>(</rp>
-	<rt>$3</rt>
-	<rp>)</rp>
-</ruby>'
 
 $.fn.extend {} =
 	rubyann: (options) ->
@@ -19,6 +12,11 @@ $.fn.extend {} =
 
 		@each ->
 			html = $(@).html()
-			newHtml = html.replace regex, RUBY_ANN_TEMPLATE
+			newHtml = html.replace regex, '<ruby>
+																			<rb>$2</rb>
+																			<rp>(</rp>
+																			<rt>$3</rt>
+																			<rp>)</rp>
+																		 </ruby>'
 			$(@).html(newHtml) if newHtml isnt html		#avoid modifying DOM if no ruby syntax found (ie nothing to do)
 			

@@ -1,9 +1,9 @@
 // rubyann build
 
-var gulp = require('gulp')
-var coffee = require('gulp-coffee')
-var qunit = require('gulp-qunit')
-var uglify = require('gulp-uglify')
+const gulp = require('gulp')
+const coffee = require('gulp-coffee')
+const qunit = require('gulp-qunit')
+const uglify = require('gulp-uglify')
 
 // transpile coffee src
 gulp.task('coffee', function() {
