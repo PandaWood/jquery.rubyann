@@ -1,4 +1,4 @@
-interface RubyAnnOptions {
+export interface RubyAnnOptions {
 	/**
 	 * The closing and opening delimeter characters as a single string eg "[]" or "@@"
 	 * Delimiters are used around each word/script in the ruby syntax - the default is "{}"
