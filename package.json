@@ -1,6 +1,6 @@
 {
   "name": "jquery.rubyann",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "rubyann is a jQuery plugin which uses a simple custom-syntax to create ruby annotations (eg furigana) in HTML",
   "main": "dist/jquery.rubyann.js",
   "types": "ts/jquery.rubyann.d.ts",
