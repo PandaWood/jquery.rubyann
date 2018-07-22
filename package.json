@@ -1,5 +1,5 @@
 {
-  "name": "rubyann",
+  "name": "jquery.rubyann",
   "version": "1.0.8",
   "description": "rubyann is a jQuery plugin which uses a simple custom-syntax to create ruby annotations (eg furigana) in HTML",
   "main": "dist/jquery.rubyann.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PandaWood/rubyann.git"
+    "url": "git+https://github.com/PandaWood/jquery.rubyann.git"
   },
   "keywords": [
     "ruby",
@@ -25,9 +25,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PandaWood/rubyann/issues"
+    "url": "https://github.com/PandaWood/jquery.rubyann/issues"
   },
-  "homepage": "https://github.com/PandaWood/rubyann#readme",
+  "homepage": "https://github.com/PandaWood/jquery.rubyann#readme",
   "dependencies": {
     "jquery": "<=3.1.1"
   },

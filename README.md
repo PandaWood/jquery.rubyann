@@ -1,7 +1,7 @@
-rubyann
+jquery.rubyann
 -------
 
-**rubyann** is a jQuery plugin that allows you to write [ruby annotations](https://en.wikipedia.org/wiki/Ruby_character) using a simplified (custom) markup syntax.
+**jquery.rubyann** is a jQuery plugin that allows you to write [ruby annotations](https://en.wikipedia.org/wiki/Ruby_character) using a simplified (custom) markup syntax.
 
 [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) (annotations) are small reading aids that are placed on top of characters (eg [furigana](http://en.wikipedia.org/wiki/Furigana) with kanji in Japanese).
 
@@ -19,19 +19,19 @@ It renders Like this:
 #####  The word for 'japanese language' is <ruby>  <rb>日</rb>	<rp>(</rp>	<rt>に</rt>	<rp>)</rp></ruby><ruby>  <rb>本</rb>	<rp>(</rp>	<rt>ほん</rt>	<rp>)</rp></ruby><ruby>  <rb>語</rb>	<rp>(</rp>	<rt>ご</rt>	<rp>)</rp></ruby>
 
 #
-To do this using __rubyann__ we wrap characters in a much simpler markup - using braces and commas - where the main character is first, and the annotated character (above it) is separated by a comma, both inside braces:
+To do this using __jquery.rubyann__ we wrap characters in a much simpler markup - using braces and commas - where the main character is first, and the annotated character (above it) is separated by a comma, both inside braces:
 
     <div class="furiganaText">
       The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
     </div>
 
-Without being rendered by __rubyann__, the custom syntax will render like this:
+Without being rendered by __jquery.rubyann__, the custom syntax will render like this:
 
 <div style="background-color:#dddddd;padding:5px;margin-left:10px">
 The word for 'japanese language' is {日,に}{本,ほん}{語,ご}
 </div>
 
-When __rubyann__ is called in jquery/javascript as below:
+When __jquery.rubyann__ is called in jquery/javascript as below:
 
     $('.furiganaText').rubyann();
 
@@ -48,9 +48,9 @@ See __demo/demo.html__ in the source tree for a working example/demonstration.
 
 All modern browsers support Ruby Annotations - see [Ruby Annotation Browser Support](http://caniuse.com/#feat=ruby)
 
-__rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
+__jquery.rubyann__ uses the 'fallback' syntax (xhtml 'rp' element) which puts the ruby text in brackets if the browser doesn't support ruby characters.
 
-__rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/) and includes a [qunit](https://qunitjs.com/) test suite - also written in coffeescript.
+__jquery.rubyann__ is written in [coffeescript](http://jashkenas.github.com/coffee-script/) and includes a [qunit](https://qunitjs.com/) test suite - also written in coffeescript.
 
 #### Usage
 __braces__ used in the custom syntax can be replaced by delimeters of your choice. 2 characters must be specified (left/right) in a string
