@@ -1,6 +1,6 @@
 jquery.rubyann
 -------
-(jquery.rubyann is a rename of the original 'rubyann' - this was to be able to distinguish between jquery and non-jquery versions, which are planned)
+_(see also non-jquery [rubyann](https://github.com/PandaWood/rubyann))_
 
 **jquery.rubyann** is a jQuery plugin that allows you to write [ruby annotations](https://en.wikipedia.org/wiki/Ruby_character) using a simplified (custom) markup syntax.
 

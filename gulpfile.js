@@ -1,4 +1,4 @@
-// rubyann build
+// jquery.rubyann build
 
 const gulp = require('gulp')
 const coffee = require('gulp-coffee')
