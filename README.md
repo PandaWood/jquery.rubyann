@@ -1,12 +1,10 @@
 jquery.rubyann
--------
+--------------
 _(see also non-jquery [rubyann](https://github.com/PandaWood/rubyann))_
 
 **jquery.rubyann** is a jQuery plugin that allows you to write [ruby annotations](https://en.wikipedia.org/wiki/Ruby_character) using a simplified (custom) markup syntax.
 
 [Ruby Characters](http://en.wikipedia.org/wiki/Ruby_character) (annotations) are small reading aids that are placed on top of characters (eg [furigana](http://en.wikipedia.org/wiki/Furigana) with kanji in Japanese).
-
-[![NPM](https://nodei.co/npm/jquery.rubyann.png)](https://nodei.co/npm/jquery.rubyann/)
 
 #### Example
 

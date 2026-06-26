@@ -5,9 +5,10 @@
   "main": "dist/jquery.rubyann.js",
   "types": "ts/jquery.rubyann.d.ts",
   "scripts": {
-    "gulp": "gulp",
-    "test": "gulp test",
-    "release": "gulp coffee"
+    "build": "coffee --compile --print src/jquery.rubyann.coffee | terser --compress --mangle --output dist/jquery.rubyann.js",
+    "release": "npm run build",
+    "pretest": "coffee --compile --output js tests/rubyann_tests.coffee",
+    "test": "node tests/run.js"
   },
   "repository": {
     "type": "git",
@@ -33,11 +34,9 @@
   },
   "devDependencies": {
     "@types/jquery": "^2.0.49",
-    "coffeescript": "^2.3.1",
-    "gulp": "^3.9.1",
-    "gulp-coffee": "^2.3.3",
-    "gulp-qunit": "^1.5.0",
-    "gulp-uglify": "^2.0.0",
-    "qunitjs": "^2.4.1"
+    "coffeescript": "^2.7.0",
+    "jsdom": "^24.1.0",
+    "qunit": "^2.20.0",
+    "terser": "^5.31.0"
   }
 }
